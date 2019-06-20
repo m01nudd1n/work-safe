@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Window</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="animate.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="foot.css">
+
+  <style type="text/css">
+
+  	* {
+  box-sizing: border-box;
+}
+
+  	#logoutbutton{
+  		float: right;
+  	}
+
+  	.column{
+  		text-align: center;
+  	}
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 150px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column  {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column  {
+    width: 100%;
+  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 72px;
+  left: 0;
+  background-color: #111;
+  overflow-x: visible;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.row {
+  margin-left: 170px; /* Same as the width of the sidenav */
+  
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+ 
+ #fontchange{
+ 	font-weight: normal; 
+ 	font-size: 10px;
+ 
+ }
+
+ #foot{
+ 	color:gray;
+ 	background-color:black;
+ }
+  </style>
+  <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Shopping Karlo.com</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="shopping_window.html">Home</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Shop by Categories</a></li>
+    </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+
+    </form>
+    	<a href="cart.html" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+        </a>
+        <a href="login_moin.html">
+        	<button id="logoutbutton" class="btn btn-danger navbar-btn" >Logout</button>	
+        </a>
+        	
+        
+  </div>
+
+</nav>
+
+<div class="sidenav" id="fontchange">
+  <div class="dropdown">
+    
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Men
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Shirts</a></li>
+      <li><a href="#">Jeans</a></li>
+      <li><a href="#">Footwear</a></li>
+    </ul>
+  </div>  <br><br>
+  
+  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Women
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Shirts</a></li>
+      <li><a href="#">Jeans</a></li>
+      <li><a href="#">Footwear</a></li>
+    </ul>
+  </div><br><br>
+
+<div class="dropdown">
+<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Kids
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Shirts</a></li>
+      <li><a href="#">Jeans</a></li>
+      <li><a href="#">Footwear</a></li>
+    </ul>
+  </div><br><br>
+  
+  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Electronics
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" id="drd">
+      <li><a href="#">Laptops</a></li>
+      <li><a href="#">Mobiles</a></li>
+      <li><a href="#">Home appliances</a></li>
+    </ul>
+  </div>
+
+
+</div>
+
+
+<!-- first row -->
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+  <h2>Column 1</h2>
+  <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+  <h2>Column 2</h2>
+  <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+  <h2>Column 3</h2>
+  <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+  <h2>Column 4</h2>
+  <p>Some text..</p>
+  </div>
+</div>
+ <br>
+<!-- second row -->
+<div class="row WOW bounceInUp">
+ 
+  <div class="column" style="background-color:#aaa;">
+  <h2>Column 1</h2>
+  <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+  <h2>Column 2</h2>
+  <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+  <h2>Column 3</h2>
+  <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+  <h2>Column 4</h2>
+  <p>Some text..</p>
+  </div>
+</div>
+<br>
+<!-- third row -->
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+  <h2>Column 1</h2>
+  <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+  <h2>Column 2</h2>
+  <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+  <h2>Column 3</h2>
+  <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+  <h2>Column 4</h2>
+  <p>Some text..</p>
+  </div>
+</div>
+
+<center>
+	<div class="container">
+  <ul class="pagination">
+    <li class="active"><a href="#">1</a></li>
+    <li ><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
+</div>
+	
+</center>
+
+ <!-- Footer -->
+	<section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+				</hr>
+			</div>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p><u><a href="https://www.nationaltransaction.com/">Shopping karlo</a></u> is Unregistered POC Work</p>
+					<p class="h6">&copy <a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">ShoppingKarlo.com</a></p>
+				</div>
+				</hr>
+			</div>	
+		</div>
+	</section>
+</body>
+</html>
